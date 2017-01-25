@@ -1,7 +1,27 @@
-﻿
+﻿@model List<MvcDatagridSample.Models.Users>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Sample Datagrid</h2>
+<hr>
 
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>AddressCountry</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Email</td>
+            <td>@user.AddressCountry</td>
+        </tr>
+        }
+    </tbody>
+</table>

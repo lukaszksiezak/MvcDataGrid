@@ -11,7 +11,10 @@ namespace MvcDatagridSample.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            MvcDatagridSample.Models.SampleCRMEntities context = new Models.SampleCRMEntities();
+
+            var users = context.Users.ToList();
+            return View(users);
         }
     }
 }
