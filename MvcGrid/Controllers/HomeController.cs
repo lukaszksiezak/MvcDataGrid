@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcDatagridSample.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,11 @@ namespace MvcDatagridSample.Controllers
 
             var users = context.Users.ToList();
             return View(users);
+        }
+
+        public ActionResult EditUser(Users user)
+        {
+            return View(user);
         }
     }
 }
