@@ -9,15 +9,14 @@ namespace MvcDatagridSample.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            MvcDatagridSample.Models.SampleCRMEntities context = new Models.SampleCRMEntities();
-
-            var users = context.Users.ToList();
-            return View(users);
+            
+            return View();
         }
 
-        public ActionResult EditUser(Users user)
+        public ActionResult EditUser(int userId)
         {
-            return View(user);
+
+            return View();
         }
     }
 }
