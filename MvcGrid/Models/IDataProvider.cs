@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace WebApplication1.Models
+namespace MvcDataGrid.Models
 {
-    public interface IDataProvider<T>
+    public interface IDataProvider<T> 
     {
         IEnumerable<T> GetAllUsers();
         T GetById(int id);

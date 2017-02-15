@@ -12,7 +12,7 @@ namespace MvcDatagridSample.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Users: IEntity
     {
         public int UsersID { get; set; }
         public string Name { get; set; }
@@ -24,5 +24,13 @@ namespace MvcDatagridSample.Models
         public string AddressCountry { get; set; }
         public string Company { get; set; }
         public string StartedWorking { get; set; }
+
+        public int Id
+        {
+            get
+            {
+                return this.UsersID;
+            }
+        }
     }
 }
