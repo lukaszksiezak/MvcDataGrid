@@ -7,16 +7,15 @@ namespace MvcDatagridSample.Controllers
 {
     public class HomeController : Controller
     {
-        private IDataProvider<IEntity> dataProvider;
-        HomeController(IDataProvider<IEntity> dataProvider)
+        private IDataProvider<Users> dataProvider;
+        public HomeController(IDataProvider<Users> dataProvider)
         {
             this.dataProvider = dataProvider;
         }
         // GET: Home
         public ActionResult Index()
         {
-            
-            return View();
+            return View(this.dataProvider.GetAllUsers().ToList());
         }
 
         public ActionResult EditUser(int userId)
