@@ -18,10 +18,10 @@ namespace MvcDatagridSample.Controllers
             return View(this.dataProvider.GetAllUsers().ToList());
         }
 
+        [HttpGet]
         public ActionResult EditUser(int userId)
         {
-
-            return View();
+            return View(this.dataProvider.GetById(userId));
         }
     }
 }

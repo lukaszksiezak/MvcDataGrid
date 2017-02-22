@@ -18,7 +18,7 @@
         @foreach (var user in Model)
         {
         <tr class="clickableRow">
-            <td>@Html.ActionLink(@user.Name, "EditUser", "Home", Model.Where(u=>u.Name == user.Name).Single())</td>
+            <td><a href="/Home/EditUSer?userId=@user.UsersID">@user.Name</a></td>
             <td>@user.Email</td>
             <td>@user.AddressCountry</td>
         </tr>
