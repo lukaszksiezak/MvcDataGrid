@@ -23,5 +23,12 @@ namespace MvcDatagridSample.Controllers
         {
             return View(this.dataProvider.GetById(userId));
         }
+
+        [HttpPost]
+        public ActionResult EditUser(Users user)
+        {
+            dataProvider.Edit(user);
+            return Redirect("/Home/Index");
+        }
     }
 }
